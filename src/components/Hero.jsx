@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <div className="hero-text">
+        <div className="hero-text slide-in-left">
           <h1>Hi, I'm Anton Nikitin</h1>
           <h2>Unity VR Developer & Software Engineer</h2>
           <p>
@@ -33,17 +33,20 @@ const Hero = () => {
               View Resume
             </a>
           </div>
-        </div>
-        <div className="hero-skills">
-          <h3>Tech Stack</h3>
-          <div className="skills-grid">
-            <div className="skill-item">Unity</div>
-            <div className="skill-item">C#</div>
-            <div className="skill-item">Unreal Engine</div>
-            <div className="skill-item">C++</div>
-            <div className="skill-item">VR Development</div>
-            <div className="skill-item">Sound Design</div>
+          <div className="hero-skills slide-in-up">
+            <h3>Tech Stack</h3>
+            <div className="skills-grid">
+              <div className="skill-item">Unity</div>
+              <div className="skill-item">C#</div>
+              <div className="skill-item">Unreal Engine</div>
+              <div className="skill-item">C++</div>
+              <div className="skill-item">VR Development</div>
+              <div className="skill-item">Sound Design</div>
+            </div>
           </div>
+        </div>
+        <div className="hero-image slide-in-right">
+          <img src="/Picture.jpg" alt="Anton Nikitin" />
         </div>
       </div>
     </section>

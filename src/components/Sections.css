@@ -12,6 +12,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  scroll-margin-top: 100px;
 }
 
 .skills-section {
@@ -36,6 +37,40 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1.5rem;
+  opacity: 0;
+  transform: translateX(-100px);
+  will-change: transform, opacity;
+}
+
+.skill-group.slide-in-left {
+  animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skill-group.slide-in-right {
+  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: translateX(100px);
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .skill-group h4 {
@@ -162,11 +197,12 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 3rem 1rem;
+    padding: 5rem 1rem 3rem 1rem;
   }
 
   .section h2 {
     font-size: 2rem;
+    scroll-margin-top: 80px;
   }
 
   .projects-grid {

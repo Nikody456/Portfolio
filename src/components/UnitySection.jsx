@@ -1,7 +1,11 @@
 import React from "react";
 import "./Sections.css";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const UnitySection = () => {
+  const [leftSkillRef, isLeftVisible] = useIntersectionObserver();
+  const [rightSkillRef, isRightVisible] = useIntersectionObserver();
+
   const projects = [
     {
       title: "VR Training Simulators",
@@ -113,7 +117,17 @@ const UnitySection = () => {
         <h3>Technical Expertise</h3>
         <div className="skills-container">
           {skills.map((skillGroup, index) => (
-            <div key={index} className="skill-group">
+            <div
+              key={index}
+              ref={index === 0 ? leftSkillRef : rightSkillRef}
+              className={`skill-group ${
+                index === 0 && isLeftVisible
+                  ? "slide-in-left"
+                  : index === 1 && isRightVisible
+                  ? "slide-in-right"
+                  : ""
+              }`}
+            >
               <h4>{skillGroup.category}</h4>
               <ul>
                 {skillGroup.items.map((item, i) => (

@@ -36,11 +36,16 @@ const ScrollToTop = () => {
           className={`scroll-to-top ${isVisible ? "visible" : ""}`}
           aria-label="Scroll to top"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="scroll-arrow">
-            <path
-              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
-              transform="rotate(-90 12 12)"
-            />
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            className="scroll-arrow"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 15l-6-6-6 6" />
           </svg>
         </div>
       )}
