@@ -103,8 +103,8 @@ const UnitySection = () => {
       items: [
         "Animation Systems",
         "Physics Simulation",
+        "Level Design",
         "State Machine Architecture",
-        "VRIF Expertise",
       ],
     },
   ];
