@@ -1,34 +1,65 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import UnitySection from './components/UnitySection'
+import UnrealSection from './components/UnrealSection'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import Resume from './components/Resume'
+import ScrollToTop from './components/ScrollToTop'
 
-function App() {
-  const [count, setCount] = useState(0)
+function MainContent() {
+  const [activeSection, setActiveSection] = useState('unity')
+
+  const scrollToSection = () => {
+    const section = document.querySelector('.sections')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const handleSectionChange = (section) => {
+    setActiveSection(section)
+    scrollToSection()
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <Header activeSection={activeSection} setActiveSection={handleSectionChange} />
+      <main>
+        <Hero />
+        <div className="sections" id="sections">
+          {activeSection === 'unity' && <UnitySection />}
+          {activeSection === 'unreal' && <UnrealSection />}
+        </div>
+        <Contact />
+      </main>
+      <Footer />
+      <ScrollToTop />
+    </div>
+  )
+}
+
+function ResumePage() {
+  return (
+    <div className="app">
+      <Header />
+      <Resume />
+      <ScrollToTop />
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/resume" element={<ResumePage />} />
+      </Routes>
+    </Router>
   )
 }
 

@@ -1,0 +1,40 @@
+.project-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.project-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #64ffda;
+}
+
+.project-link svg {
+  width: 24px;
+  height: 24px;
+}
