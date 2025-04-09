@@ -25,7 +25,7 @@ const Footer = () => {
                   document.querySelector('[data-section="unreal"]')?.click()
                 }
               >
-                Unreal Engine
+                Unreal Projects
               </a>
             </li>
           </ul>
