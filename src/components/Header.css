@@ -36,13 +36,35 @@
 }
 
 .hashtag {
-  font-size: 2rem;
-  font-weight: bold;
   color: #646cff;
-  transform: rotate(deg);
+  font-size: 2rem;
+  margin-right: 1rem;
   display: inline-block;
-  margin-right: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(100, 108, 255, 0.3);
+  animation: bounceIn 1s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.name-link:hover .hashtag {
+  transform: translateY(-5px);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translateY(-10px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .logo h1 {
