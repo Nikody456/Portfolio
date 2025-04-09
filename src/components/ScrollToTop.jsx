@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,16 +37,8 @@ const ScrollToTop = () => {
           className={`scroll-to-top ${isVisible ? "visible" : ""}`}
           aria-label="Scroll to top"
         >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            className="scroll-arrow"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 15l-6-6-6 6" />
+          <svg viewBox="0 0 24 24" fill="white" className="scroll-arrow">
+            <path d="M12 4l-8 8h6v8h4v-8h6z" />
           </svg>
         </div>
       )}
