@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text slide-in-left">
           <h1>Hi, I'm Anton Nikitin</h1>
-          <h2>Unity VR Developer & Software Engineer</h2>
+          <h2>Unity & Unreal Engine Developer</h2>
           <p>
             Motivated game programmer with 3 years of professional experience in
             VR development. Specializing in Unity and Unreal Engine with strong
