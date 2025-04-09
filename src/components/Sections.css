@@ -197,12 +197,13 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 5rem 1rem 3rem 1rem;
+    padding: 6rem 1rem 3rem 1rem;
   }
 
   .section h2 {
     font-size: 2rem;
-    scroll-margin-top: 80px;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
   }
 
   .projects-grid {

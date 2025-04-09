@@ -15,6 +15,7 @@
   transform: translateY(100px);
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(100, 108, 255, 0.4);
+  z-index: 1000;
 }
 
 .scroll-to-top.visible {
@@ -26,6 +27,8 @@
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
+  fill: currentColor;
+  stroke-width: 3;
 }
 
 .scroll-to-top:hover {
@@ -36,4 +39,19 @@
 
 .scroll-to-top:hover .scroll-arrow {
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    width: 48px;
+    height: 48px;
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .scroll-arrow {
+    width: 28px;
+    height: 28px;
+    stroke-width: 3;
+  }
 }
