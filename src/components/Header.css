@@ -82,6 +82,7 @@
 .navigation {
   flex: 2;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
@@ -191,5 +192,13 @@
 
   .social-links {
     margin-top: 0.5rem;
+  }
+
+  .navigation {
+    gap: 0.5rem;
+  }
+
+  .navigation .nav-button {
+    padding: 0.5rem;
   }
 }

@@ -15,6 +15,8 @@ export function initScrollReveal() {
   document.querySelectorAll(".reveal").forEach((element) => {
     observer.observe(element);
   });
+
+  return () => observer.disconnect();
 }
 
 // Add reveal class to sections

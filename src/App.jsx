@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import UnitySection from "./components/UnitySection";
 import UnrealSection from "./components/UnrealSection";
+import ProprietaryEngineSection from "./components/ProprietaryEngineSection";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume";
@@ -27,7 +28,7 @@ function ScrollToTopOnMount() {
 }
 
 function MainContent() {
-  const [activeSection, setActiveSection] = useState("unity");
+  const [activeSection, setActiveSection] = useState("proprietary");
 
   const scrollToSection = () => {
     const section = document.querySelector(".sections");
@@ -44,8 +45,10 @@ function MainContent() {
   useEffect(() => {
     // Initialize scroll reveal animations
     addRevealClass();
-    initScrollReveal();
+    return initScrollReveal();
+  }, [activeSection]);
 
+  useEffect(() => {
     // Ensure scroll position is at top on component mount
     window.scrollTo(0, 0);
   }, []);
@@ -60,7 +63,9 @@ function MainContent() {
       <main>
         <Hero />
         <div className="sections" id="sections">
-          {activeSection === "unity" ? <UnitySection /> : <UnrealSection />}
+          {activeSection === "proprietary" && <ProprietaryEngineSection />}
+          {activeSection === "unity" && <UnitySection />}
+          {activeSection === "unreal" && <UnrealSection />}
         </div>
         <Contact />
       </main>

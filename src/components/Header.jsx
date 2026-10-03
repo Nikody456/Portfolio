@@ -32,13 +32,22 @@ const Header = ({ activeSection, setActiveSection }) => {
             <span className="hashtag">#</span>
             <div>
               <h1>Anton Nikitin</h1>
-              <p>Unity & Unreal Developer</p>
+              <p>Game Developer | C++ & C#</p>
             </div>
           </Link>
         </div>
         {!isResumePage ? (
           <>
             <nav className="navigation">
+              <button
+                className={`nav-button ${
+                  activeSection === "proprietary" ? "active" : ""
+                }`}
+                onClick={() => setActiveSection("proprietary")}
+                data-section="proprietary"
+              >
+                C++ / Proprietary Engine
+              </button>
               <button
                 className={`nav-button ${
                   activeSection === "unity" ? "active" : ""

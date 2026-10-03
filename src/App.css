@@ -126,6 +126,14 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  main {
+    padding-top: 184px;
+  }
+
+  .sections {
+    scroll-margin-top: 134px;
+  }
+
   .skills-container {
     grid-template-columns: 1fr;
   }
@@ -142,6 +150,16 @@ main {
     left: -30%;
     top: -20%;
     opacity: 0.12;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 228px;
+  }
+
+  .sections {
+    scroll-margin-top: 178px;
   }
 }
 

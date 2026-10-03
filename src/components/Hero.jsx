@@ -15,11 +15,11 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text slide-in-left">
           <h1>Hi, I'm Anton Nikitin</h1>
-          <h2>Unity & Unreal Developer</h2>
+          <h2>Game Developer | C++ & C#</h2>
           <p>
-            Motivated game programmer with 3 years of professional experience in
-            VR development. Specializing in Unity and Unreal Engine with strong
-            development skills.
+            Game developer with 4 years of professional development experience,
+            including production gameplay development in C++ at Playrix.
+            Experienced with proprietary game technology, Unity, and Unreal Engine.
           </p>
           <div className="hero-buttons">
             <a
@@ -36,12 +36,12 @@ const Hero = () => {
           <div className="hero-skills slide-in-up">
             <h3>Tech Stack</h3>
             <div className="skills-grid">
-              <div className="skill-item">Unity</div>
-              <div className="skill-item">C#</div>
-              <div className="skill-item">Unreal Engine</div>
               <div className="skill-item">C++</div>
-              <div className="skill-item">VR Development</div>
-              <div className="skill-item">Sound Design</div>
+              <div className="skill-item">C#</div>
+              <div className="skill-item">Proprietary Engine</div>
+              <div className="skill-item">Unreal Engine</div>
+              <div className="skill-item">Unity</div>
+              <div className="skill-item">Gameplay Programming</div>
             </div>
           </div>
         </div>
