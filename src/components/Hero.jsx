@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text slide-in-left">
           <h1>Hi, I'm Anton Nikitin</h1>
-          <h2>Game Developer | C++ & C#</h2>
+          <h2>Game Developer</h2>
           <p>
             Game developer with 4 years of professional development experience,
             including production gameplay development in C++ at Playrix.

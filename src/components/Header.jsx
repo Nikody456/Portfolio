@@ -32,7 +32,7 @@ const Header = ({ activeSection, setActiveSection }) => {
             <span className="hashtag">#</span>
             <div>
               <h1>Anton Nikitin</h1>
-              <p>Game Developer | C++ & C#</p>
+              <p>Game Developer</p>
             </div>
           </Link>
         </div>
